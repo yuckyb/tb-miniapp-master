@@ -1,35 +1,38 @@
 <template>
   <div class="container" @click="clickHandle('test click', $event)">
-
-    <div class="userinfo" @click="bindViewTap">
-      <img class="userinfo-avatar" v-if="userInfo.avatarUrl" :src="userInfo.avatarUrl" background-size="cover" />
-      <div class="userinfo-nickname">
-        <card :text="userInfo.nickName"></card>
-      </div>
-    </div>
-
-    <div class="usermotto">
-      <div class="user-motto">
-        <card :text="motto"></card>
-      </div>
-    </div>
-
-    <form class="form-container">
-      <input type="text" class="form-control" v-model="motto" placeholder="v-model" />
-      <input type="text" class="form-control" v-model.lazy="motto" placeholder="v-model.lazy" />
-    </form>
-    <a href="/pages/counter/main" class="counter">去往Vuex示例页面</a>
+    <swiper :indicator-dots="indicatorDots"
+        :autoplay="autoplay" :interval="interval" :duration="duration">
+        <block v-for="(item,index) in imgUrls" :key="index">
+            <swiper-item>
+            <img :src="item" class="slide-image" mode='widthFit' />
+            </swiper-item>
+        </block>
+    </swiper>
+    <van-button type="primary">按钮</van-button>
   </div>
 </template>
 
 <script>
 import card from '@/components/card'
-
 export default {
   data () {
     return {
-      motto: 'Hello World',
-      userInfo: {}
+    imgUrls: [    
+    'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+    'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+    'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+    ],
+    //是否显示指适点
+    indicatorDots: true,
+    //是否轮播
+    autoplay: true,
+    //
+    interval: 5000,
+    duration: 1000,
+    inputShowed:false,
+    inputVal:"",
+    //轮播页当前index
+    swiperCurrent:0, 
     }
   },
 
@@ -67,6 +70,14 @@ export default {
 </script>
 
 <style scoped>
+swiper-item{
+  width: 100%;
+  height: auto;
+}
+ img{
+   width: 100%;
+   height: 100%;
+  }
 .userinfo {
   display: flex;
   flex-direction: column;
