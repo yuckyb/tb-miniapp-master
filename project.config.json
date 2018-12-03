@@ -7,7 +7,7 @@
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"uglifyFileName": true
+		"uglifyFileName": false
 	},
 	"miniprogramRoot": "dist/wx/",
 	"compileType": "miniprogram",

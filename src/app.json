@@ -2,6 +2,7 @@
   "pages": [
     "pages/index/main",
     "pages/logs/main",
+    "pages/search/main",
     "pages/counter/main"
   ],
   "window": {
@@ -21,7 +22,14 @@
       "selectedIconPath": "/static/images/car_01.png",  
       "iconPath": "/static/images/car_02.png",  
       "text": "购物车"
-    }]
+    },
+    {
+      "pagePath": "pages/search/main",
+      "selectedIconPath": "/static/images/car_01.png",  
+      "iconPath": "/static/images/car_02.png",  
+      "text": "搜索"
+    }
+  ]
   }
 
 }

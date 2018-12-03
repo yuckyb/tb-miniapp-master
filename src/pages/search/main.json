@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "van-badge": "/static/vant/badge/index",
+        "van-badge-group": "/static/vant/badge-group/index",
+        "van-search": "/static/vant/search/index"
+
+    }
+}

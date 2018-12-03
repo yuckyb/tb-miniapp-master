@@ -1,5 +1,6 @@
 <template>
-  <div class="container" @click="clickHandle('test click', $event)">
+  <div class="container">
+    <van-search :value="searchValue" placeholder="请输入搜索关键词" />
     <swiper :indicator-dots="indicatorDots"
         :autoplay="autoplay" :interval="interval" :duration="duration">
         <block v-for="(item,index) in imgUrls" :key="index">
@@ -8,7 +9,6 @@
             </swiper-item>
         </block>
     </swiper>
-    <van-button type="primary">按钮</van-button>
   </div>
 </template>
 
@@ -17,9 +17,10 @@ import card from '@/components/card'
 export default {
   data () {
     return {
+      searchValue:'',
     imgUrls: [    
     'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-    'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543839162572&di=72f9f4da6a0d21e24d74a8608b4aea0f&imgtype=0&src=http%3A%2F%2F5b0988e595225.cdn.sohucs.com%2Fimages%2F20180415%2F499dfbc8a48d40439bb2737693e23e93.jpeg',
     'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
     ],
     //是否显示指适点
