@@ -1,6 +1,17 @@
 <template>
   <div class="container">
-    <van-search :value="searchValue" placeholder="请输入搜索关键词" />
+    <div class="topNav">
+      <van-tabs animated feature>
+        <van-tab title="标签"></van-tab>
+        <van-tab title="标签"></van-tab>
+        <van-tab title="标签"></van-tab>
+        <van-tab title="标签"></van-tab>
+         <van-tab title="标签"></van-tab>
+        <van-tab title="标签"></van-tab>
+        <van-tab title="标签"></van-tab>
+      </van-tabs>
+    </div>
+
     <swiper :indicator-dots="indicatorDots"
         :autoplay="autoplay" :interval="interval" :duration="duration">
         <block v-for="(item,index) in imgUrls" :key="index">
@@ -9,6 +20,14 @@
             </swiper-item>
         </block>
     </swiper>
+    <van-notice-bar
+      left-icon="https://img.yzcdn.cn/1.png"
+      text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+    />
+    <div class="nav-list">
+
+    </div>
+
   </div>
 </template>
 

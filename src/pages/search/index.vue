@@ -7,6 +7,9 @@
       <van-badge title="产品3" info="99" />
       <van-badge title="产品4" info="199" />
     </van-badge-group>
+    <div>
+      请输入搜索关键词请输入搜索关键词请输入搜索关键词请输入搜索关键词请输入搜索关键词请输入搜索关键词
+    </div>
   </div>
 </template>
 
